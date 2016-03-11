@@ -1,4 +1,4 @@
-(defproject run-tandem "0.1.0"
+(defproject run-tandem "0.1.0-SNAPSHOT"
   :description "Simple utility to run X! Tandem."
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
