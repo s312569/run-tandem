@@ -6,7 +6,7 @@
                  [me.raynes/fs "1.4.6"]
                  [clj-tandem "0.1.5"]
                  [org.clojars.hozumi/clj-commons-exec "1.2.0"]
-                 [org.clojure/tools.cli "0.3.3"]]
+                 [org.clojure/tools.cli "0.3.5"]]
   :main ^:skip-aot run-tandem.core
   :target-path "target/%s"
   :jvm-opts ["-Xmx2000m"]
