@@ -26,10 +26,6 @@
     :parse-fn #(fs/absolute (file %))
     :validate [#(fs/exists? %)
                "Parameter file does not exist."]]
-   ["-o" "--output PATH" "OPTIONAL: Path to output file for results."
-    :parse-fn #(fs/absolute (file %))
-    :validate [#(not (fs/exists? %))
-               "Output file already exists."]]
    ["-d" "--defaults" "Print default parameters used in searches."]
    ["-h" "--help" "Print help message."]])
 
@@ -141,7 +137,5 @@
                   :else
                   (doseq [f (process-files (:files options))]
                     (println "Searching " (fs/base-name f) " ...")
-                    (if (:output options)
-                      (xtandem (:fasta options) (str f) params :outfile (:output options))
-                      (xtandem (:fasta options) (str f) params))))))))
+                    (xtandem (:fasta options) (str f) params)))))))
 
